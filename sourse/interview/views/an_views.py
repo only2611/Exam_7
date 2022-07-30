@@ -1,17 +1,11 @@
-from django.shortcuts import get_object_or_404
+from django.forms import Form
+from django.shortcuts import get_object_or_404, render, redirect
 from django.urls import reverse, reverse_lazy
+from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 
-from interview.forms import ChoiceForm
-from interview.models import Choice, Poll
-
-
-# class IndexView(ListView):
-#     model = Choice
-#     template_name =
-#     context_object_name = "tasks"
-#     ordering = ("-updated_at")
-#     paginate_by = 7
+from interview.forms import ChoiceForm, AForm
+from interview.models import Choice, Poll, Answering
 
 
 class CreateChoiceView(CreateView):
@@ -47,3 +41,18 @@ class DeleteChoice(DeleteView):
 
     def get_success_url(self):
         return reverse("poll-view", kwargs={"pk": self.object.poll.pk})
+
+
+class CreateView(View):
+    def get(self, request, **kwargs):
+        if request.method == "GET":
+            form = AForm()
+            return render(request, "answers/answering.html", {"form": form})
+    def post(self, request):
+            form = AForm(data=request.POST)
+            if form.is_valid():
+                polls = form.cleaned_data.get("polls")
+                variantes = form.cleaned_data.get("variantes")
+                new_task = Answering.objects.create(variantes=variantes, polls=polls)
+                return redirect("polls", )
+            return render(request, "answers/answering.html", {"form": form})

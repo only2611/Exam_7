@@ -17,6 +17,7 @@
                         <h2>Опрос №{{ poll.id }}</h2>
                         <p>Вопрос: {{ poll.question }}</p>
                         <p><a href="{{ poll.get_absolute_url }}">Подробнее об опросе</a></p>
+                        <p><a href="{% url "answering"%}">Пройти опрос</a></p>
                     </div>
                 </div>
             </div>
@@ -27,3 +28,5 @@
     </div>
     <p></p>
 {% endblock %}
+Footer
+© 2022 GitHub, Inc.

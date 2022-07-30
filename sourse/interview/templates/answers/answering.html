@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% for poll in variantes.vars.all %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h2> {{ poll.id }}</h2>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+<form action="" method="post">
+    {% include "partial/form.html" with button_text="Create"%}
+<p></p>
+<a href="{% url "polls" %}">На главную опросов</a>
+</form>
+{% endblock %}

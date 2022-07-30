@@ -1,7 +1,7 @@
 from django.urls import path
 
 from interview.views import PollsView, CreatePollView, PollView, UpdatePoll, DeletePoll, CreateChoiceView, DeleteChoice, \
-    UpdateChoice
+    UpdateChoice,  CreateView
 
 urlpatterns = [
     path('', PollsView.as_view(), name="polls"),
@@ -12,5 +12,6 @@ urlpatterns = [
     path('polls/<int:pk>/answer/add', CreateChoiceView.as_view(), name="a-create"),
     path('answer/<int:pk>/update/', UpdateChoice.as_view(), name="a-update"),
     path('answer/<int:pk>/delete/', DeleteChoice.as_view(), name="a-delete"),
+    path('polls/answering/add', CreateView.as_view(), name="answering"),
 
 ]
