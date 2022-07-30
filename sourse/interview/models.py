@@ -21,8 +21,8 @@ class Poll(BaseModel):
     def __str__(self):
         return f"{self.id}.{self.question} - {self.created_at}"
 
-    # def get_absolute_url(self):
-    #     return reverse("project-view", kwargs={"pk": self.pk})
+    def get_absolute_url(self):
+        return reverse("poll-view", kwargs={"pk": self.pk})
 
     class Meta:
         db_table = "questions"

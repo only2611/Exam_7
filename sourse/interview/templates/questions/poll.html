@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+{% block nav %}
+{#        <a class="nav-link" href="{% url "create" project.pk%}">Создать задачку</a>#}
+        <a class="nav-link" href="{% url "poll-update" poll.pk %}">Редактировать опрос</a>
+        <a class="nav-link" href="{% url "poll-delete" poll.pk %}">Удалить опрос</a>
+{% endblock %}
+{% block content %}
+<h4 class="text-danger text-center">Просмотр опроса № {{ poll.id }}</h4>
+    <p>вопрос - {{ poll.question }}</p>
+    <p>дата создания опроса - {{ poll.created_at }}</p>
+
+
+    <p></p>
+{#<p><h3>Задачи по проекту: {{project.name}}</h3>#}
+{#    <div class="row">#}
+{#        {% for project in project.taskss.all %}#}
+{#            <div class="col-12 col-md-6 col-lg-4">#}
+{#                <div class="card mb-3">#}
+{#                    <div class="card-body">#}
+{#                        <h3>{{ project.summary }} ({{ project.description}})</h3>#}
+{#                        <p><a href="{% url "poll-view" poll.pk%}">Подробнее о задаче</a></p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        {% endfor %}#}
+{#    </div>#}
+{#</p>#}
+
+<a href="{% url "polls" %}">На главную опросов</a>
+{% endblock %}
