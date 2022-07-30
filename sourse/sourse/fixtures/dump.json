@@ -1,0 +1,122 @@
+[
+{
+    "model": "interview.poll",
+    "pk": 1,
+    "fields": {
+        "created_at": "2022-07-30T06:32:26.633Z",
+        "question": "Do you like a cheese?"
+    }
+},
+{
+    "model": "interview.poll",
+    "pk": 2,
+    "fields": {
+        "created_at": "2022-07-30T06:32:57.784Z",
+        "question": "Have you ever been to London?"
+    }
+},
+{
+    "model": "interview.poll",
+    "pk": 3,
+    "fields": {
+        "created_at": "2022-07-30T06:33:31.129Z",
+        "question": "Which do you prefer Marvel or DC ?"
+    }
+},
+{
+    "model": "interview.poll",
+    "pk": 4,
+    "fields": {
+        "created_at": "2022-07-30T06:34:05.792Z",
+        "question": "How old are you?"
+    }
+},
+{
+    "model": "interview.poll",
+    "pk": 5,
+    "fields": {
+        "created_at": "2022-07-30T06:34:31.243Z",
+        "question": "What do you want to achieve?"
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 1,
+    "fields": {
+        "variant": "yes, of course",
+        "poll": 1
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 2,
+    "fields": {
+        "variant": "no, never tast",
+        "poll": 1
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 3,
+    "fields": {
+        "variant": "in near future yes",
+        "poll": 2
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 4,
+    "fields": {
+        "variant": "till not",
+        "poll": 2
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 5,
+    "fields": {
+        "variant": "marvelous",
+        "poll": 3
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 6,
+    "fields": {
+        "variant": "dc is amazing",
+        "poll": 3
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 7,
+    "fields": {
+        "variant": "20",
+        "poll": 4
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 8,
+    "fields": {
+        "variant": "10",
+        "poll": 4
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 9,
+    "fields": {
+        "variant": "big dreams",
+        "poll": 5
+    }
+},
+{
+    "model": "interview.choice",
+    "pk": 10,
+    "fields": {
+        "variant": "incredible goals",
+        "poll": 5
+    }
+}
+]
