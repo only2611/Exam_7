@@ -41,6 +41,7 @@ class Choice(models.Model):
 
 
 
+
     class Meta:
         db_table = "variant"
         verbose_name = "Вариант"

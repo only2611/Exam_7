@@ -20,7 +20,6 @@ class CreatePollView(CreateView):
 
 
     def get_success_url(self):
-        # return reverse("p-view", kwargs={"pk": self.object.pk})
         return reverse("polls",)
 
 
@@ -37,8 +36,6 @@ class UpdatePoll(UpdateView):
     model = Poll
 
 
-    # def get_success_url(self):
-    #     return reverse("project-view", kwargs={"pk": self.object.pk})
 
 
 class DeletePoll(DeleteView):
